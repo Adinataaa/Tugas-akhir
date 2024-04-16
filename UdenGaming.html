@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uden Gaming</title>
+    <style>
+        html {
+            scrollbar-width: thin;
+            scroll-behavior: smooth;
+        }
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            width:100%;
+            margin:auto;
+            align-items: center;
+            z-index: 20;
+            position: fixed;
+            top: 0;
+            padding: 15px;
+            background-color: white;
+        }   
+        nav ul {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            gap: 50px;
+            padding-left: 500px;
+        }
+        nav  h1 {
+            position: relative;
+            font-style: bold;
+            color: #90B4CE;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+        }
+        nav ul li a:active {
+            color:rgb(167, 221, 253);
+        }
+        .bagian1 {
+            display: flex;
+            width:80%;
+            margin:auto;
+            margin-top: 60px;
+            justify-content: space-between;
+            color: #0A4067;
+            padding-bottom: 200px;
+            padding-top: 50px;
+        }
+        .bagian1 img {
+            width: 300px;
+            height: auto;
+        }
+        .anak-bagian1 {
+            width:500px;
+            margin-top: 20px;
+            color:rgb(131, 144, 168);
+            font-size: small;
+        }
+        button {
+            margin-top: 30px;
+            width: 130px;
+            height: 40px;
+        }
+        .cek-sekarang {
+            background-color: #3DA9FC;
+            border-radius: 20px;
+            box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.4);
+            color: white;
+            border: none;
+        }
+        .bagian2 {
+            background-color: #EAF5FF;
+            text-align: center;
+            padding-bottom: 250px;
+        }
+        .bagian2 h2 {
+            padding: 20px;
+            color: #0A4067;
+        }
+        .anak-bagian2 {
+            display: flex;
+            width: 95%;
+            justify-content: space-between;
+            margin: auto;
+            margin-top: 50px;
+        }
+        .anak-bagian2 img {
+            width: 300px;
+            border-radius: 10px;
+        }
+        .anak2-bagian2 {
+            text-align: left;
+            margin-left: 20px;
+            color: rgb(131, 144, 168);
+        }
+        .anak2-bagian2 h3 {
+            color: #0A4067;
+        }
+        .anak2-bagian2 a {
+            color: #3DA9FC;
+        }
+        .bagian3 {
+            color: #0A4067;
+            text-align:center;
+            padding-bottom: 250px;
+        }
+        .bagian3 h2 {
+            padding-top:30px;
+        }
+        .bagian3 p {
+            margin-top: 50px;
+            margin-bottom: 35px;
+        }
+        .container {
+            display: flex;
+            justify-content: space-around;
+        }
+        .b31, .b32, .b33 {
+            width: 300px;
+            margin:auto;
+            background-color: #1C3F64;
+            color:white;
+            border-radius: 1px 30px;
+        }
+        .b31 img, .b32 img, .b33 img {
+            width: 100px;
+            height: 100px;
+            margin-top: 20px;
+        }
+        .b31 p, .b32 p, .b33 p {
+            text-align: left;
+            font-size: small;
+            margin: 20px;
+        }
+        .b32 {
+            border-radius: 10px;
+        }
+        .b33 {
+            border-radius: 30px 1px;
+        }
+        .klik-disini {
+            background-color: #3DA9FC;
+            border-radius: 20px;
+            box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.4);
+            color: white;
+            border: none;
+        }
+        .bagian4 {
+            color: #0A4067;
+            background-color: #EAF5FF;
+            text-align:center;
+            padding-bottom: 350px;
+        }
+        .bagian4 h2 {
+            padding-top:30px;
+        }
+        .bagian4 p {
+            margin-top: 50px;
+            margin-bottom: 35px;
+            padding-bottom:20px;
+        }
+        .anak-bagian4 {
+            display: flex;
+            justify-content: space-around;
+            width: 80%;
+            margin: auto;
+        }
+        .anak-bagian4 img {
+            width: 100px;
+            height: 100px;
+            border-radius: 200px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+        .bgn41, .bgn42, .bgn43 {
+            background-color: #1C3F64;
+            width: 200px;
+            height: 200px;
+            border-radius: 20px;
+            box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.2);
+        }
+        .bgn41 p, .bgn42 p, .bgn43 p {
+            color: #475057dc;
+            text-align: left;
+            margin-left: 20px;
+            margin-top:0;
+
+        }
+        .bgn41 div, .bgn42 div, .bgn43 div {
+            background-color: white;
+            border-radius: 10px 0px 10px 10px;
+            box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.2);
+            font-size: small;
+            padding-top: 20px;
+        }
+        .ank-bgn4 {
+            text-align: left;
+            margin-left: 20px;
+        }
+        .bagian5 {
+            background-color: #1C3F64;
+            padding-bottom: 50px;
+            padding-top: 30px;
+            color: #8093A8;
+            display: flex;
+        }
+        .bagian5 h3, .bagian5 p {
+            margin-left: 30px;
+        }
+        .bagian5 h3 {
+            color: #97B3CB;
+        }
+        .bagian5 p {
+            margin-top: 5px;
+        }
+        .bagian5 a {
+            text-decoration: none;
+            color: #8093A8;
+            margin-left: 30px;
+        }
+        .bagian5 img {
+            display: flex;
+            width: 20px;
+            height: 20px;
+            margin-left: 30px;
+        }
+        .ank-ank-bgn5 {
+            display: flex;
+            margin-bottom: 10px;
+        }
+        .ank-ank-bgn5 p, .ank-ank-bgn5 a{
+            margin-left: 10px;
+        }
+        .ank-bgn5 {
+            margin-left: 400px;
+            margin-top: 50px;
+        }
+        .ank-bgn5 hr {
+            margin-top: 5px;
+            margin-left: 30px;
+            width: 400px;
+        }
+        .bagian6 {
+            background-color: #204E72;
+            text-align: center;
+            padding: 10px;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 13px;
+        }
+        .gotop {
+            position: fixed;
+            left:95%;
+            top:87%;
+        }
+        .ank-bgn6 {
+            color: white;
+            background-color: #764DE1;
+            border: none;
+            border-radius: 15px;
+            width: 50px;
+            height: 40px;
+            padding-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <nav id="top">
+        <h1>LoveGood</h1>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="bagian1" id="home">
+        <div>
+            <h1>Cari Tahu <br>Kesehatan Diri Mu <br>Melalui Kami</h1>
+            <p class="anak-bagian1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit commodi iure est, qui quibusdam voluptas aliquid. Corrupti unde laborum nemo et itaque autem, repudiandae in. Culpa dolores quis modi porro!</p>
+            <button class="cek-sekarang">Cek Sekarang</button>
+        </div>
+        <img src="https://img.freepik.com/free-vector/online-doctor-concept-illustration_114360-1831.jpg?t=st=1712017573~exp=1712021173~hmac=7dc5ab82530e150dfc165d6d82612bbc719a747a81cf06a94df859a898999d6f&w=740" alt="gambar dokter">
+    </div>
+    <div class="bagian2" id="about">
+        <h2>Tentang Kami</h2>
+        <div class="anak-bagian2">
+            <img src="https://img.freepik.com/free-vector/group-health-professional-team_23-2148478138.jpg?t=st=1712020243~exp=1712023843~hmac=418eeea6648986ac595100793843a7d13d18af9682f22731ed1d3d95e1922593&w=996" alt="gambar dokter">
+            <div class="anak2-bagian2">
+                <h5>Sejarah Tentang Kami</h5>
+                <h3>Lovegood Team</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt pariatur ab tempore veritatis, voluptatibus totam facere nisi tempora earum aperiam. Illum nihil, atque deserunt nam dolorem consectetur odit veritatis? Vero! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque fugiat, laboriosam nostrum nulla nam obcaecati sunt porro beatae corrupti doloremque voluptatem dignissimos repudiandae nemo quaerat ad perferendis explicabo odit minima!</p>
+                <a href="#">Read More</a>
+            </div>
+        </div>
+    </div>
+    <div class="bagian3" id="services">
+        <h2>Pilihan Layanan Kami</h2>
+        <p>Lovegood memberikan layanan kesehatan yang terbaik untuk anda</p>
+        <div class="container">
+            <div class="b31">
+                <img src="https://cdn-icons-png.freepik.com/512/3609/3609516.png?uid=R124826674&ga=GA1.2.222950281.1677815342&" alt="">
+                <h4>Cek Langsung</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque quae doloribus veritatis aut magni esse blanditiis tempora officia sit exercitationem. Ipsum harum corporis repellendus laborum voluptatum nulla aspernatur ut exercitationem.</p>
+            </div>
+            <div class="b32">
+                <img src="https://cdn-icons-png.freepik.com/512/6490/6490998.png?uid=R124826674&ga=GA1.2.222950281.1677815342&" alt="">
+                <h4>Cek Online</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti necessitatibus temporibus accusantium cupiditate minima magnam perspiciatis neque. Tenetur asperiores atque repudiandae doloribus laborum inventore, aliquid quod expedita voluptas minima tempore?</p>
+            </div>
+            <div class="b33">
+                <img src="https://cdn-icons-png.freepik.com/512/6060/6060110.png?uid=R124826674&ga=GA1.2.222950281.1677815342&" alt="">
+                <h4>Cek Psikologis</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut error rerum nobis. Natus eveniet voluptate laudantium, quibusdam quos asperiores quia debitis possimus aspernatur consequuntur, magnam officiis velit architecto! Quae, veniam!</p>
+            </div>
+        </div>
+        <button class="klik-disini">Klik Disini</button>
+    </div>
+    <div class="bagian4">
+        <h2>Apa Kata Mereka</h2>
+        <p>Kepuasan anda adalah prioritas utama kami</p>
+        <div class="anak-bagian4">
+            <div class="bgn41">
+                <img src="https://depostjabar.com/wp-content/uploads/2023/08/lu-punya-diut.jpg" alt="">
+                <div>
+                    <h4 class="ank-bgn4">Bayem Sore</h4>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.Quis maiores rem quasi nisi repellendus,non nihil aperiam quos excepturi quia reprehenderit accusamus et.Minus aliquam quisquam, delectus voluptas earum nihil!</p>
+                </div>
+            </div>
+            <div class="bgn42">
+                <img src="https://studio.mrngroup.co/storage/app/media/Prambors/Editorial/coki%20pardede-20210902111927.jpeg?tr=w-600" alt="">
+                <div>
+                    <h4 class="ank-bgn4">Coki Pardede</h4>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.Quis maiores rem quasi nisi repellendus,non nihil aperiam quos excepturi quia reprehenderit accusamus et.Minus aliquam quisquam, delectus voluptas earum nihil!</p>
+                </div>
+            </div>
+            <div class="bgn43">
+                <img src="https://www.viv.co.id/uploads/large/1b0b062a199150a37b64ebd2e3cd0357.jpeg" alt="">
+                <div>
+                    <h4 class="ank-bgn4">Mr Thomas Waduh</h4>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.Quis maiores rem quasi nisi repellendus,non nihil aperiam quos excepturi quia reprehenderit accusamus et.Minus aliquam quisquam, delectus voluptas earum nihil!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bagian5" id="contact">
+        <div>
+            <h3>Lovegood</h3>
+            <p>Hubungi Kami</p>
+            <br>
+            <div class="ank-ank-bgn5">
+                <img src="https://cdn-icons-png.freepik.com/512/3670/3670051.png?uid=R124826674&ga=GA1.2.222950281.1677815342&" alt="">
+                <a href="https://wa.me/6281234567890">081234567890</a>
+            </div>
+            <div class="ank-ank-bgn5">
+                <img src="https://cdn-icons-png.freepik.com/512/5968/5968764.png?uid=R124826674&ga=GA1.2.222950281.1677815342&" alt="">
+                <a href="https://www.facebook.com/?locale=id_ID">Lovegood</a>
+            </div>
+            <div class="ank-ank-bgn5">
+                <img src="https://cdn-icons-png.freepik.com/512/3955/3955024.png?uid=R124826674&ga=GA1.2.222950281.1677815342&" alt="">
+                <a href="https://www.instagram.com/">Lovegood</a>
+            </div>
+            <div class="ank-ank-bgn5">
+                <img src="https://cdn-icons-png.freepik.com/512/3670/3670211.png?uid=R124826674&ga=GA1.2.222950281.1677815342&" alt="">
+                <a href="https://twitter.com/?lang=id">Lovegood</a>
+            </div>
+        </div>
+        <div class="ank-bgn5">
+            <p>"Health is a state of complete harmony of the body, mind and spirit. <br> When one is free from physical disabilities and mental distractions, the <br> gates of the soul open" <br>By B.KS Iyengar</p>
+            <hr>
+        </div>
+    </div>
+    <div class="bagian6">
+        <p>&copy; All Right Reserved | Adinata</p>
+    </div>
+    <a class="gotop" href="#home"><button class="ank-bgn6">^</button></a>
+</body>
+</html>
